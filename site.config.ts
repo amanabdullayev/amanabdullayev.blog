@@ -54,7 +54,7 @@ export default siteConfig({
   navigationStyle: 'custom',
   navigationLinks: [
     {
-      title: 'About Aman',
+      title: 'About Me',
       pageId: 'd9bc4468ddb24c198df8c636ae5e22a0'
     },
     {
