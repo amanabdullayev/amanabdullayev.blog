@@ -10,11 +10,11 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Aman Abdullayev ',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'amanabdullayev.vercel.app',
   author: 'Aman Abdullayev',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Aman\'s Personal Website',
 
   // social usernames (optional)
   //twitter: 'transitive_bs',
