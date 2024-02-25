@@ -51,8 +51,7 @@
     "react-tweet-embed": "^2.0.0",
     "react-use": "^17.4.2",
     "rss": "^1.2.2",
-    "@vercel/analytics": "latest",
-    "postgres": "^3.4.3"
+    "@vercel/analytics": "latest"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.3.1",
