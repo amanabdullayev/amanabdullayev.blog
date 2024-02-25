@@ -14,7 +14,11 @@ export default siteConfig({
   author: 'Aman Abdullayev',
 
   // open graph metadata (optional)
+<<<<<<< HEAD
   description: 'Aman Abdullayev - Personal website',
+=======
+  description: 'Aman\'s Personal Website',
+>>>>>>> origin/main
 
   // social usernames (optional)
   //twitter: 'transitive_bs',
