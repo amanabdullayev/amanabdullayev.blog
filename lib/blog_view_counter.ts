@@ -1,8 +1,6 @@
 import { revalidatePath, unstable_noStore as noStore } from 'next/cache';
 import postgres from 'postgres';
 
-const NOTION_TOKEN = process.env.POSTGRES_URL
-
 
 export const sql = postgres(process.env.POSTGRES_URL!, {
     ssl: 'allow',
