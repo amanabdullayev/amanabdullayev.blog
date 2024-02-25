@@ -94,12 +94,12 @@ export const PageHead: React.FC<
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
       <Script
-        strategy="afterInteractive" // Load after the page becomes interactive
+        strategy="lazyOnload" // Load after the page becomes interactive
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
       <Script
         id="ga-script"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       >
         {`
       window.dataLayer = window.dataLayer || [];
