@@ -1,10 +1,10 @@
 {
-  "name": "nextjs-notion-starter-kit",
+  "name": "aman-personal-website",
   "version": "2.0.0",
   "private": true,
   "description": "personalpersonal website",
   "author": "Aman Abdullayev",
-  "repository": "amanabdullayevamanabdullayev/amanabdullayev.blog",
+  "repository": "amanabdullayev/amanabdullayev.blog",
   "license": "MIT",
   "engines": {
     "node": ">=16"
