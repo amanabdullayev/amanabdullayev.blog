@@ -2,8 +2,6 @@
 import * as React from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import Script from 'next/script'
-// used for tracking pageviews (optional)
 
 import * as Fathom from 'fathom-client'
 // used for rendering equations (optional)
@@ -33,8 +31,6 @@ import { Analytics } from '@vercel/analytics/react';
 if (!isServer) {
   bootstrap()
 }
-
-export const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -68,19 +64,5 @@ export default function App({ Component, pageProps }: AppProps) {
   return (<>
     <Component {...pageProps} />
     <Analytics />
-    <Script
-      strategy="afterInteractive" // Load after the page becomes interactive
-      src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-    />
-    <Script
-      id="ga-script"
-      strategy="afterInteractive"
-    >
-      {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_TRACKING_ID}');
-    `}
-    </Script> </>)
+  </>)
 }
