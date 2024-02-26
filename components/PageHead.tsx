@@ -1,14 +1,10 @@
 import * as React from 'react'
 import Head from 'next/head'
-import Script from 'next/script'
-// used for tracking pageviews (optional)
 
 import * as config from '@/lib/config'
 import * as types from '@/lib/types'
 import { getSocialImageUrl } from '@/lib/get-social-image-url'
 
-
-export const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 export const PageHead: React.FC<
   types.PageProps & {
@@ -93,21 +89,6 @@ export const PageHead: React.FC<
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
-      <Script
-        strategy="lazyOnload" // Load after the page becomes interactive
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
-      <Script
-        id="ga-script"
-        strategy="lazyOnload"
-      >
-        {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${GA_TRACKING_ID}');
-    `}
-      </Script>
     </Head>
   )
 }

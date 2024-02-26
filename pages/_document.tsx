@@ -1,7 +1,10 @@
 import * as React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 import { IconContext } from '@react-icons/all-files'
+
+export const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 export default class MyDocument extends Document {
   render() {
@@ -18,6 +21,21 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+            <Script
+              strategy="lazyOnload" // Load after the page becomes interactive
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <Script
+              id="ga-script"
+              strategy="lazyOnload"
+            >
+              {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_TRACKING_ID}');
+    `}
+            </Script>
           </Head>
 
           <body>
