@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Aman Abdullayev ',
-  domain: 'amanabdullayev.me',
+  domain: 'www.amanabdullayev.me',
   author: 'Aman Abdullayev',
 
   // open graph metadata (optional)
