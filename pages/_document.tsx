@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { IconContext } from '@react-icons/all-files'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
@@ -7,7 +7,7 @@ import { IconContext } from '@react-icons/all-files'
 export const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 export default class MyDocument extends Document {
-  render() {
+  override render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
