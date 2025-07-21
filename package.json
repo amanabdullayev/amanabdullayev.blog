@@ -2,17 +2,14 @@
   "name": "aman-personal-website",
   "version": "2.0.0",
   "private": true,
-  "description": "personalpersonal website",
+  "description": "personal website",
   "author": "Aman Abdullayev",
   "repository": "amanabdullayev/amanabdullayev.blog",
   "license": "MIT",
   "packageManager": "pnpm@10.11.1",
-  "packageManager": "pnpm@10.11.1",
   "engines": {
     "node": ">=18"
-    "node": ">=18"
   },
-  "type": "module",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -26,18 +23,10 @@
     "deps:link:notion-utils": "pnpm link ../react-notion-x/packages/notion-utils",
     "deps:link:notion-client": "pnpm link ../react-notion-x/packages/notion-client",
     "deps:link:react-notion-x": "pnpm link ../react-notion-x/packages/react-notion-x",
-    "deps:upgrade": "[ -z $GITHUB_ACTIONS ] && pnpm up -L notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
-    "deps:link": "[ -z $GITHUB_ACTIONS ] && run-s deps:link:* || echo 'Skipping deps:update on CI'",
-    "deps:unlink": "[ -z $GITHUB_ACTIONS ] && pnpm add notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
-    "deps:link:notion-types": "pnpm link ../react-notion-x/packages/notion-types",
-    "deps:link:notion-utils": "pnpm link ../react-notion-x/packages/notion-utils",
-    "deps:link:notion-client": "pnpm link ../react-notion-x/packages/notion-client",
-    "deps:link:react-notion-x": "pnpm link ../react-notion-x/packages/react-notion-x",
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "test": "run-p test:*",
-    "test:lint": "eslint .",
     "test:lint": "eslint .",
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
@@ -47,20 +36,8 @@
     "@keyvhq/redis": "^1.6.10",
     "@react-icons/all-files": "^4.1.0",
     "classnames": "^2.5.1",
-    "classnames": "^2.5.1",
     "expiry-map": "^2.0.0",
     "fathom-client": "^3.4.1",
-    "ky": "^1.8.1",
-    "lqip-modern": "^2.2.1",
-    "next": "^15.3.3",
-    "notion-client": "^7.4.2",
-    "notion-types": "^7.4.2",
-    "notion-utils": "^7.4.2",
-    "p-map": "^7.0.3",
-    "p-memoize": "^7.1.1",
-    "posthog-js": "^1.249.4",
-    "prismjs": "^1.30.0",
-    "react": "^19.1.0",
     "ky": "^1.8.1",
     "lqip-modern": "^2.2.1",
     "next": "^15.3.3",
@@ -88,18 +65,7 @@
     "@types/react": "^19.1.6",
     "@types/react-body-classname": "^1.1.10",
     "@types/rss": "^0.0.32",
-    "@fisch0920/config": "^1.1.2",
-    "@next/bundle-analyzer": "^15.3.3",
-    "@types/node": "^22.15.30",
-    "@types/prismjs": "^1.26.5",
-    "@types/react": "^19.1.6",
-    "@types/react-body-classname": "^1.1.10",
-    "@types/rss": "^0.0.32",
     "cross-env": "^7.0.2",
-    "eslint": "^9.28.0",
-    "npm-run-all2": "^8.0.4",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.3"
     "eslint": "^9.28.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.5.3",
@@ -109,16 +75,6 @@
     "cacheable-request": {
       "keyv": "npm:@keyvhq/core@~1.6.6"
     }
-  },
-  "prettier": "@fisch0920/config/prettier",
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --ignore-unknown --write",
-      "eslint --fix"
-    ]
   },
   "prettier": "@fisch0920/config/prettier",
   "simple-git-hooks": {
